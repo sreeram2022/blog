@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Opensource apps for android">
+<title>Opensource</title>
+
+<link rel='canonical' href='http://localhost:1313/post/opensource/'>
+
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Opensource">
+<meta property='og:description' content="Opensource apps for android">
+<meta property='og:url' content='http://localhost:1313/post/opensource/'>
+<meta property='og:site_name' content='Sreeram venkata'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='linux' /><meta property='article:published_time' content='2024-06-04T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-06-04T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Opensource">
+<meta name="twitter:description" content="Opensource apps for android">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu1c14afa2d766dfe17cd12fc57b69d39c_1477920_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Sreeram venkata</a></h1>
+            <h2 class="site-description">This blog pretty much sumps up my life. Here, I&#39;ll share all of my passions and interests.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#openboard">OpenBoard</a></li>
+    <li><a href="#florisboard">Florisboard</a></li>
+    <li><a href="#fairemail">FairEmail</a></li>
+    <li><a href="#music-player">Music Player</a></li>
+    <li><a href="#seal">Seal</a></li>
+    <li><a href="#plain">Plain</a></li>
+    <li><a href="#termux">Termux</a></li>
+    <li><a href="#vi-music">Vi Music</a></li>
+    <li><a href="#open-camera">Open Camera</a></li>
+    <li><a href="#personaldnsfilter">personalDNSfilter</a></li>
+    <li><a href="#newpipe">NewPipe</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" >
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/opensource/">Opensource</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Opensource apps for android
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 04, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>After discovering , F-Droid is an installable catalogue of FOSS (Free and Open Source Software) applications for the Android platform. The client makes it easy to browse, install, and keep track of updates on your device.
+, I became very interested in open-source apps.</p>
+<p>(Fossify apps) exactly like native google features</p>
+<h2 id="openboard"><a href="#openboard" class="header-anchor"></a>OpenBoard
+</h2><p>OpenBoard is a 100% FOSS keyboard based on AOSP, with no dependency on Google binaries, and it respects your privacy. You can explore and configure the keyboard settings to your preferences. Rest assured about the privacy aspects since it does not track or log your keystrokes.</p>
+<h2 id="florisboard"><a href="#florisboard" class="header-anchor"></a>Florisboard
+</h2><p>Florisboard is another open-source keyboard that emphasizes privacy and offers a variety of customization options. You can take advantage of its rich feature set and customize the keyboard layout, themes, and gestures. It stores up to 100 clipboard items but doesn’t have good spell correction support.</p>
+<h2 id="fairemail"><a href="#fairemail" class="header-anchor"></a>FairEmail
+</h2><p>FairEmail is a fully-featured email client that focuses on privacy and usability. It can be overwhelming at first due to its extensive features and customization options. Spend some time getting familiar with its interface and features because it has a learning curve.
+I&rsquo;ve also used K9 Mail. In my opinion, if real-time notifications are crucial, stick with FairEmail. Otherwise, K9 Mail is a simpler alternative if you can tolerate the 15-minute check interval.</p>
+<h2 id="music-player"><a href="#music-player" class="header-anchor"></a>Music Player
+</h2><p>Open-source music players for Android come in various forms with different focuses, such as minimalism and feature-rich interfaces. They offer features like an equalizer, sleep timer, and file organization with a minimal interface.
+I’ve tried with gramophone.</p>
+<h2 id="seal"><a href="#seal" class="header-anchor"></a>Seal
+</h2><p>Seal allows you to download videos and audio files from platforms such as YouTube. The best feature, in my opinion, is the ability to download all videos in a YouTube playlist with one click.</p>
+<h2 id="plain"><a href="#plain" class="header-anchor"></a>Plain
+</h2><p>PlainApp is an open-source application that allows you to manage your phone through a web browser. Access files, videos, music, contacts, and more from your desktop using a secure, easy-to-use web interface!</p>
+<h2 id="termux"><a href="#termux" class="header-anchor"></a>Termux
+</h2><p>Termux provides a powerful terminal emulator and Linux environment for Android, allowing you to run a variety of Linux command-line utilities. You can install and configure packages according to your needs and create and run scripts to automate tasks.</p>
+<h2 id="vi-music"><a href="#vi-music" class="header-anchor"></a>Vi Music
+</h2><p>Vi Music is an open-source app intended as a replacement for YouTube Music, offering features to stream and manage your music library. The interface is clean, and you can download songs offline without needing YouTube Premium.</p>
+<h2 id="open-camera"><a href="#open-camera" class="header-anchor"></a>Open Camera
+</h2><p>Open Camera is a fully-featured camera app that offers extensive manual controls and features. You can experiment with the manual settings to enhance your photography skills. There is a lot of customization available in the app to match any photography style.</p>
+<h2 id="personaldnsfilter"><a href="#personaldnsfilter" class="header-anchor"></a>personalDNSfilter
+</h2><p>PersonalDNSfilter is a DNS filter with firewall capabilities to block unwanted content and ads at the DNS level. Set up the DNS filters according to your privacy and security needs.</p>
+<h2 id="newpipe"><a href="#newpipe" class="header-anchor"></a>NewPipe
+</h2><p>NewPipe is a lightweight YouTube frontend that does not rely on Google services and offers features like background playback and download options. You can utilize the background playback and download options for a better YouTube experience. Benefit from improved privacy since it does not use Google’s proprietary APIs.</p>
+<p>By exploring and customizing these applications, you can make the most of their open-source benefits while tailoring them to your needs.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/linux/">Linux</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on Jun 04, 2024
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    
+        
+    
+
+    
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        
+    </body>
+</html>

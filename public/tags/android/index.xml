@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Android on Sreeram venkata</title>
+        <link>http://localhost:1313/tags/android/</link>
+        <description>Recent content in Android on Sreeram venkata</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 14 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/android/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Android debloat</title>
+        <link>http://localhost:1313/post/debloat/</link>
+        <pubDate>Sun, 14 Jul 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/debloat/</guid>
+        <description>&lt;p&gt;I came across universal-android-debloater in github.&lt;/p&gt;
+&lt;p&gt;Android debloat refers to the process of removing or disabling unnecessary pre-installed applications (often called bloatware) that come with Android devices. These pre-installed apps are usually added by the device manufacturer. Bloatware can consume system resources such as storage, memory, and battery, and in some cases, can affect the performance of the device.
+So basically, this application aims to improve the overall performance and user experience by getting rid of these unwanted apps.&lt;/p&gt;
+&lt;p&gt;I’ve installed the app using homebrew.&lt;/p&gt;
+&lt;p&gt;brew install android-platform-tools&lt;/p&gt;
+&lt;p&gt;Then connected my android phone using USB C to my mac &amp;amp; you can run the application to get GUI and the usage is self explanatory.
+But if you want to analyse there are many adb commands(use adb help command). You can search and find out a command for every usecase.&lt;/p&gt;
+&lt;h2 id=&#34;here-are-some-commands&#34;&gt;&lt;a href=&#34;#here-are-some-commands&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Here are some commands
+&lt;/h2&gt;&lt;p&gt;== Adb Server
+adb kill-server
+adb start-server&lt;/p&gt;
+&lt;p&gt;== Adb Reboot
+adb reboot
+adb reboot recovery
+adb reboot-bootloader
+adb root //restarts adb with root permissions&lt;/p&gt;
+&lt;p&gt;== Shell
+adb shell    // Open or run commands in a terminal on the host Android device.&lt;/p&gt;
+&lt;p&gt;== Devices
+adb usb
+adb devices   //show devices attached
+adb devices -l //devices (product/model)
+adb connect ip_address_of_device&lt;/p&gt;
+&lt;p&gt;== Get device android version
+adb shell getprop ro.build.version.release&lt;/p&gt;
+&lt;p&gt;== LogCat
+adb logcat
+adb logcat -c // clear // The parameter -c will clear the current logs on the device.
+adb logcat -d &amp;gt; [path_to_file] // Save the logcat output to a file on the local system.
+adb bugreport &amp;gt; [path_to_file] // Will dump the whole device information like dumpstate, dumpsys and logcat output.&lt;/p&gt;
+&lt;p&gt;== Files
+adb push [source] [destination]    // Copy files from your computer to your phone.
+adb pull [device file location] [local file location] // Copy files from your phone to your computer.&lt;/p&gt;
+&lt;p&gt;== App install
+adb -e install path/to/app.apk&lt;/p&gt;
+&lt;p&gt;-d                        - directs command to the only connected USB device&amp;hellip;
+-e                        - directs command to the only running emulator&amp;hellip;
+-s &lt;serial number&gt;        &amp;hellip;
+-p &lt;product name or path&gt; &amp;hellip;
+The flag you decide to use has to come before the actual adb command:&lt;/p&gt;
+&lt;p&gt;adb devices | tail -n +2 | cut -sf 1 | xargs -IX adb -s X install -r com.myAppPackage // Install the given app on all connected devices.&lt;/p&gt;
+&lt;p&gt;== Uninstalling app from device
+adb uninstall com.myAppPackage
+adb uninstall &amp;lt;app .apk name&amp;gt;
+adb uninstall -k &amp;lt;app .apk name&amp;gt; -&amp;gt; &amp;ldquo;Uninstall .apk withour deleting data&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;adb shell pm uninstall com.example.MyApp
+adb shell pm clear [package] // Deletes all data associated with a package.&lt;/p&gt;
+&lt;p&gt;adb devices | tail -n +2 | cut -sf 1 | xargs -IX adb -s X uninstall com.myAppPackage //Uninstall the given app from all connected devices&lt;/p&gt;
+&lt;p&gt;== Update app
+adb install -r yourApp.apk  //  -r means re-install the app and keep its data on the device.
+adb install –k &amp;lt;.apk file path on computer&amp;gt;&lt;/p&gt;
+&lt;p&gt;== Home button
+adb shell am start -W -c android.intent.category.HOME -a android.intent.action.MAIN&lt;/p&gt;
+&lt;p&gt;== Activity Manager
+adb shell am start -a android.intent.action.VIEW
+adb shell am broadcast -a &amp;lsquo;my_action&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;adb shell am start -a android.intent.action.CALL -d tel:+972527300294 // Make a call&lt;/p&gt;
+&lt;p&gt;// Open send sms screen with phone number and the message:
+adb shell am start -a android.intent.action.SENDTO -d sms:+972527300294   &amp;ndash;es  sms_body &amp;ldquo;Test &amp;ndash;ez exit_on_sent false&lt;/p&gt;
+&lt;p&gt;// Reset permissions
+adb shell pm reset-permissions -p your.app.package
+adb shell pm grant [packageName] [ Permission]  // Grant a permission to an app.
+adb shell pm revoke [packageName] [ Permission]   // Revoke a permission from an app.&lt;/p&gt;
+&lt;p&gt;// Emulate device
+adb shell wm size 2048x1536
+adb shell wm density 288
+// And reset to default
+adb shell wm size reset
+adb shell wm density reset&lt;/p&gt;
+&lt;p&gt;== Print text
+adb shell input text &amp;lsquo;Wow, it so cool feature&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;== Screenshot
+adb shell screencap -p /sdcard/screenshot.png&lt;/p&gt;
+&lt;p&gt;$ adb shell
+shell@ $ screencap /sdcard/screen.png
+shell@ $ exit
+$ adb pull /sdcard/screen.png&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;adb shell screenrecord /sdcard/NotAbleToLogin.mp4&lt;/p&gt;
+&lt;p&gt;$ adb shell
+shell@ $ screenrecord &amp;ndash;verbose /sdcard/demo.mp4
+(press Control + C to stop)
+shell@ $ exit
+$ adb pull /sdcard/demo.mp4&lt;/p&gt;
+&lt;h2 id=&#34;images&#34;&gt;&lt;a href=&#34;#images&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;images
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/debloat/a.png&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;
+&lt;img src=&#34;http://localhost:1313/post/debloat/b.png&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;
+&lt;img src=&#34;http://localhost:1313/post/debloat/c.png&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;
+&lt;img src=&#34;http://localhost:1313/post/debloat/d.png&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;It’ll give you the descrption of the app and why should you delete the app.
+I’ve deleted almost all the recommended apps to remove bloatware. Needless to say it’s best not to delete the apps listed under unsafe and expert.
+Have fun with the application and enjoy a sleek android experience.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Termux</title>
+        <link>http://localhost:1313/post/termux/</link>
+        <pubDate>Tue, 18 Jun 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/termux/</guid>
+        <description>&lt;p&gt;Termux is a terminal emulator and Linux environment app for Android that allows users to run a Linux distribution on their Android devices. It provides a command-line interface and access to a large collection of Linux packages, making it possible to perform a wide range of tasks that are typically done on a Linux desktop or server. Termux is popular among developers, system administrators, and tech enthusiasts for its versatility and ease of use.&lt;/p&gt;
+&lt;p&gt;I’ve installed Termux: styling: A Termux add-on app to customize the terminal font and color theme.&lt;/p&gt;
+&lt;p&gt;Package Management:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Uses the pkg command to manage software packages, similar to apt on Debian-based systems.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg update: Updates the local package database.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg upgrade: Upgrades all installed packages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg install {package_name}: To installs a packages like git, Python ect.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg uninstall {package_name}: To uninstalls a package.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg search {keyword}: Search for packages containing the specified keyword.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg list-all: To see the lists of all available packages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg list-installed: To see the lists of all installed packages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg list-updates: Lists packages with available updates.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Development Environment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Supports a variety of programming languages and frameworks, such as Python, Node.js, Ruby, Java, and more.
+Remote Access:&lt;/li&gt;
+&lt;li&gt;Can be used to connect to remote servers via SSH.&lt;/li&gt;
+&lt;li&gt;Supports tools like tmux for terminal multiplexing and nano or vim for text editing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;image&#34;&gt;&lt;a href=&#34;#image&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;image
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/termux/a.webp&#34;
+	width=&#34;1080&#34;
+	height=&#34;1507&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;71&#34;
+		data-flex-basis=&#34;171px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Customizability:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Users can customize the appearance and behavior of the terminal emulator.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Supports the installation of additional shells, such as Zsh, along with customization frameworks like Oh My Zsh.
+File Management:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Access the Android file system and perform file management tasks using standard Linux commands.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd {directory_name} : Move to specific directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd : Go back to the past directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd $HOME : Change the current directory to the home directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ls : To see files and directories in the current directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ls -a: To see hidden files.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pwd: Print working directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cp {file_name} : Copy files or directories.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;rm {file_name} : Remove (delete) a file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;rm -rf {directory_name} : Delete a directory and its contents.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;touch {file_name} : To create a new file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mkdir {directory_name} : Use this command to create a new directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Networking commands:
+You can do many networking-related tasks in Termux. Here’s the some basic networking Termux commands list:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pkg install nmap : To install Nmap in Termux.&lt;/li&gt;
+&lt;li&gt;nmap {Ip_address} : To scan a network.&lt;/li&gt;
+&lt;li&gt;ifconfig : To see your network informations.&lt;/li&gt;
+&lt;li&gt;curl {url} : To display or download a web page.&lt;/li&gt;
+&lt;li&gt;wget {url} : To download a file from a URL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;System and Processes management commands:
+Termux has many system and process management commands to control and manage Android devices efficiently. Here are some system and process management Termux commands list:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;top : To see device CPU, memory, and other resource usage.&lt;/li&gt;
+&lt;li&gt;ps : List of all running processes with process IDs.&lt;/li&gt;
+&lt;li&gt;kill {process_id} : To kill a process with process ID.&lt;/li&gt;
+&lt;li&gt;uname -a : Display system information like the kernel version, system architecture, and hostname.&lt;/li&gt;
+&lt;li&gt;uptime : Shows how long the system has been running.&lt;/li&gt;
+&lt;li&gt;free : To see the system used memory and free memory.&lt;/li&gt;
+&lt;li&gt;du : To see the disk usage for files and directories.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Termux api&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;sensors&amp;rdquo;: [    &amp;ldquo;icm4n607 ACCELEROMETER&amp;rdquo;,    &amp;ldquo;akm09918 MAGNETOMETER&amp;rdquo;,    &amp;ldquo;icm4n607 GYROSCOPE&amp;rdquo;,    &amp;ldquo;tcs3701 PROXIMITY&amp;rdquo;,    &amp;ldquo;UNCALI_MAG&amp;rdquo;,    &amp;ldquo;UNCALI_GYRO&amp;rdquo;,    &amp;ldquo;SIGNIFICANT_MOTION&amp;rdquo;,    &amp;ldquo;STEP_DETECTOR&amp;rdquo;,    &amp;ldquo;STEP_COUNTER&amp;rdquo;,    &amp;ldquo;WAKE_GESTURE&amp;rdquo;,    &amp;ldquo;DEVICE_ORIENTATION&amp;rdquo;,    &amp;ldquo;STATIONARY_DETECT&amp;rdquo;,    &amp;ldquo;UNCALI_ACC&amp;rdquo;,    &amp;ldquo;sx933x SAR&amp;rdquo;,    &amp;ldquo;tcs3701 LIGHT&amp;rdquo;,    &amp;ldquo;RAW_MAG&amp;rdquo;,    &amp;ldquo;ai_shutter&amp;rdquo;,    &amp;ldquo;STEP_DETECTOR_WAKEUP&amp;rdquo;,    &amp;ldquo;OPLUS Fusion Light Sensor&amp;rdquo;,    &amp;ldquo;OPLUS Side Panel Fusion Light Sensor&amp;rdquo;,    &amp;ldquo;PICKUP_DETECT&amp;rdquo;,    &amp;ldquo;LUX_AOD&amp;rdquo;,    &amp;ldquo;PEDO_MINUTE&amp;rdquo;,    &amp;ldquo;Game Rotation Vector Sensor&amp;rdquo;,    &amp;ldquo;GeoMag Rotation Vector Sensor&amp;rdquo;,    &amp;ldquo;Gravity Sensor&amp;rdquo;,    &amp;ldquo;Linear Acceleration Sensor&amp;rdquo;,    &amp;ldquo;Rotation Vector Sensor&amp;rdquo;,    &amp;ldquo;Orientation Sensor&amp;rdquo;  ]}&lt;/p&gt;
+&lt;p&gt;Locayiotion also&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

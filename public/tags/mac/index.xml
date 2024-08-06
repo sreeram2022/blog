@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Mac on Sreeram venkata</title>
+        <link>http://localhost:1313/tags/mac/</link>
+        <description>Recent content in Mac on Sreeram venkata</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 21 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/mac/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Dot files</title>
+        <link>http://localhost:1313/post/dot-files/</link>
+        <pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/dot-files/</guid>
+        <description>&lt;p&gt;Dot files (or dotfiles) are configuration files on Unix-like systems (such as Linux and macOS) that are often hidden because their filenames begin with a dot (e.g., .bashrc, .vimrc).
+These files typically control various settings and behaviors of applications and the shell environment. Users often customize dot files to tailor their computing environment to their preferences, such as configuring shell prompts, aliases, key bindings, and other settings specific to applications like Vim, Git, or even desktop environments.
+They are called dot files because their filenames start with a dot, making them hidden by default in directory listings unless explicitly shown.&lt;/p&gt;
+&lt;p&gt;I’ve shared my dot files on github here.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/dot-files/d.jpg&#34;
+	width=&#34;2586&#34;
+	height=&#34;1580&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;163&#34;
+		data-flex-basis=&#34;392px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;sketchybar&#34;&gt;&lt;a href=&#34;#sketchybar&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Sketchybar
+&lt;/h2&gt;&lt;p&gt;This bar project aims to create a highly flexible, customizable, fast and powerful status bar replacement for people that like playing with shell scripts.
+The main design principle of this project is that all elements of the bar can be added, removed and freely changed at any point in time. Thus, the configuration of the bar is not static, rather it is possible to adapt the appearance of the bar completely dynamically with the help of a powerful event-driven scripting system at any point in time using the highly configurable basic building blocks SketchyBar offers.
+Configuration file is located in ~/.config/sketchybar, we can modify the bar according to our needs.&lt;/p&gt;
+&lt;h2 id=&#34;yabai&#34;&gt;&lt;a href=&#34;#yabai&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Yabai
+&lt;/h2&gt;&lt;p&gt;yabai is a window management utility that is designed to work as an extension to the built-in window manager of macOS. yabai allows you to control your windows, spaces and displays freely using an intuitive command line interface and optionally set user-defined keyboard shortcuts using ↗ skhd and other third-party software.
+skhd is a simple hotkey daemon for macOS that focuses on responsiveness and performance. Hotkeys are defined in a text file through a simple DSL. skhd is able to hotload its config file, meaning that hotkeys can be edited and updated live while skhd is running.&lt;/p&gt;
+&lt;h2 id=&#34;vscode-vim&#34;&gt;&lt;a href=&#34;#vscode-vim&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;vscode vim
+&lt;/h2&gt;&lt;p&gt;space and v to toggle vim
+space and c to comment and uncomment multiple lines
+cmd+d to multi cursor to replace
+cmd+shift+. to display different parts of the code
+ctrl+z for zen mode
+cmd+j for terminal
+~ to change the capital or small
+ctrl+a to increment and +x for decerement&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;to search for that word&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I back up my dot files periodically. I can download thse from github and create the same development environment on any unix based device.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Trying asahi linux</title>
+        <link>http://localhost:1313/post/asahi/</link>
+        <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/asahi/</guid>
+        <description>&lt;p&gt;Asahi Linux is a project aimed at developing a Linux distribution for Apple Silicon Macs. The name &amp;ldquo;Asahi&amp;rdquo; comes from the Japanese word for &amp;ldquo;rising sun,&amp;rdquo; symbolizing a new dawn for Linux on Apple hardware. The project focuses on making Linux run smoothly on Apple&amp;rsquo;s ARM-based processors, such as the M1, M1 Pro, M1 Max, and M1 Ultra chips.&lt;/p&gt;
+&lt;h1 id=&#34;images&#34;&gt;&lt;a href=&#34;#images&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;images
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/asahi/a.png&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Key Features of Asahi Linux:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Compatibility with Apple Silicon: Asahi Linux is designed to run on Apple Silicon Macs, taking full advantage of the performance and power efficiency of Apple&amp;rsquo;s custom ARM architecture.&lt;/li&gt;
+&lt;li&gt;Open Source: The project is open source, allowing the community to contribute to its development and improve compatibility and performance.&lt;/li&gt;
+&lt;li&gt;Full Linux Experience: Asahi Linux aims to provide a full Linux experience on Apple Silicon Macs, including support for various Linux applications and utilities.&lt;/li&gt;
+&lt;li&gt;Active Development: The project is actively developed, with ongoing work to support more features and hardware components of Apple Silicon Macs.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;pros&#34;&gt;&lt;a href=&#34;#pros&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Pros:
+&lt;/h2&gt;&lt;p&gt;Installation is smooth.
+Battery usage is actually better than expected.
+It’s faster than macOs. When I open any application or run any commands on kitty it’s significantly faster than mac.&lt;/p&gt;
+&lt;h2 id=&#34;problems-that-ive-faced&#34;&gt;&lt;a href=&#34;#problems-that-ive-faced&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Problems that I’ve faced:
+&lt;/h2&gt;&lt;p&gt;I3 is not supported. I tried but it didn’t boot. But it is perfectly  compatible with hyperland.
+Screensharing problem:
+The system crashed when I started to screen share in google meet. I tried to close the lid and open but it didn’t work. I had to wait for a while and hold the power button to restart the system.&lt;/p&gt;
+&lt;h1 id=&#34;video&#34;&gt;&lt;a href=&#34;#video&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;video
+&lt;/h1&gt;&lt;p&gt;Asahi Linux represents a significant effort to bring the flexibility and power of Linux to the advanced hardware of Apple Silicon Macs, providing an exciting new option for Linux enthusiasts and developers.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Tmux</title>
+        <link>http://localhost:1313/post/tmux/</link>
+        <pubDate>Tue, 25 Jun 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/tmux/</guid>
+        <description>&lt;p&gt;Tmux is a terminal multiplexer that allows us to manage multiple terminal
+sessions within a single window. all of the commands have prefix Ctrl+b by
+default. But,I changed ctrl+b to shift+b as it is more accessible.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;tmux - for new session&lt;/li&gt;
+&lt;li&gt;tmux ls - for list of all the session&lt;/li&gt;
+&lt;li&gt;tmux a -t session name- to enter into a session(t for target)&lt;/li&gt;
+&lt;li&gt;tmux new -s session name- to create a new session (s for session)&lt;/li&gt;
+&lt;li&gt;shift+b d to detach from session&lt;/li&gt;
+&lt;li&gt;shift+b % for vertical panes&lt;/li&gt;
+&lt;li&gt;shift+b “ for horizontal panes&lt;/li&gt;
+&lt;li&gt;shift+b x to close pane&lt;/li&gt;
+&lt;li&gt;shift+b [ for copying mode &amp;amp; same with ] for pasing, use y to copy (just like
+in vim) to paste in system clipboard.&lt;/li&gt;
+&lt;li&gt;tmux kill-session- to close a session&lt;/li&gt;
+&lt;li&gt;shift+b Arrow Key (Left, Right, Up, Down) — Move between panes.&lt;/li&gt;
+&lt;li&gt;shift+B C — Create a new window.&lt;/li&gt;
+&lt;li&gt;shift+B N or P — Move to the next or previous window.&lt;/li&gt;
+&lt;li&gt;shift+B 0 (1,2&amp;hellip;) — Move to a specific window by number.&lt;/li&gt;
+&lt;li&gt;shift+B ? — View all keybindings. Press Q to exit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;my-tmux-config&#34;&gt;&lt;a href=&#34;#my-tmux-config&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;My tmux config
+&lt;/h2&gt;&lt;p&gt;Often, I use Tmux with keyboard. But when I&amp;rsquo;m lazy and slouching over on a sofa,
+it&amp;rsquo;s good idea to have mouse access. We can toggle the mouse on (or off) with
+the command set -g mouse.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/tmux/a.png&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set -s escape-time 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel &amp;#34;pbcopy&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;unbind C-b
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bind B send-prefix
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set-option -g prefix B
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set -g mouse on
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setw -g mode-keys vi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set -s escape-time 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set -g default-terminal &amp;#34;screen-256color&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set -ga terminal-overrides &amp;#34;,xterm-256color:Tc&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I can also customize the status bar(mostly colours) and few other things, but
+this configuration is more than enough to get the job done for me.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>My Zsh</title>
+        <link>http://localhost:1313/post/zsh/</link>
+        <pubDate>Sun, 16 Jun 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/zsh/</guid>
+        <description>&lt;h2 id=&#34;my-zsh&#34;&gt;&lt;a href=&#34;#my-zsh&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;my zsh
+&lt;/h2&gt;&lt;p&gt;Let’s talk about mac terminal. So, generally Mac comes with basic and boring
+terminal(zsh).&lt;/p&gt;
+&lt;p&gt;For a long time I didn’t know the power we can leverage using zsh. I looked in
+to youtube for terminal setup found few amazing tutorials to make my terminal
+flexible as well as aesthetic.&lt;/p&gt;
+&lt;p&gt;Almost all of the tutorials explained the same thing:&lt;/p&gt;
+&lt;p&gt;Installing Iterm2 and oh my zsh framework A powerlevel10k theme A nerd font ( I
+use jetbrains mono) Configure .zshrc file to my own needs such as auto
+completions &amp;amp; few aliases…. Then I made my terminal mildly transparent to make
+it look more charming.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/zsh/zsh.png&#34;
+	width=&#34;3023&#34;
+	height=&#34;1911&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;379px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;So, since I’m addicted to aesthetics of my terminal I wanted learn vim so that I
+can stick with it while coding and jotting down ideas.&lt;/p&gt;
+&lt;p&gt;Initially it seemed worthless effort. But after few weeks of “trying and
+leaving”, one fine day I determined to learn vim. The basic idea here is you
+should be able to finish your entire time in vim without lifting your fingers on
+your keyboard. I wanted to list out the commands that I use, but it’s pretty
+useless, you can find better documentation here.&lt;/p&gt;
+&lt;p&gt;Apart from using :vsp to vertically split screen to compare 2 files at the same
+time, I configured (aliased) few plugins that I use often. To access nerdtree
+press F1, you can toggle using ctrl+w or you can also use mouse. If you add
+#!/usr/bin/env python3 at the beginning of python file you can click F2 to run
+it or else you should run with :! command.&lt;/p&gt;
+&lt;p&gt;I recently need to download my telegram chat history. When I’ve downloaded it
+gave me all these html files. But I really don’t wanna store every file. I want
+one single html file with all the data. So run a python command to get me the
+names as I desired. Then I use cat command on my mac terminal to concatenate all
+the files.&lt;/p&gt;
+&lt;p&gt;I also use tmux as terminal emulator to run multiple sessions parallelly.&lt;/p&gt;
+&lt;h2 id=&#34;abbreviations-and-aliases&#34;&gt;&lt;a href=&#34;#abbreviations-and-aliases&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;abbreviations and aliases
+&lt;/h2&gt;&lt;p&gt;I’ve learnt basics of bash scripting and it’s quite fun to use in actual life. It’s just automating stuff that you would do with your terminal. Let’s say you have to run few commands at once to perform certain task.&lt;/p&gt;
+&lt;p&gt;Not only that homebrew has so many
+fun once cmatrix, tetris, toilet,…&lt;/p&gt;
+&lt;p&gt;history
+brew
+open
+google
+autocompletion…pluggins
+cmatrix
+neofetch
+leave
+say -V tessa&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

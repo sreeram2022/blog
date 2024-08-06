@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tech on Sreeram venkata</title>
+        <link>http://localhost:1313/categories/tech/</link>
+        <description>Recent content in Tech on Sreeram venkata</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 21 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/tech/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Dot files</title>
+        <link>http://localhost:1313/post/dot-files/</link>
+        <pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/dot-files/</guid>
+        <description>&lt;p&gt;Dot files (or dotfiles) are configuration files on Unix-like systems (such as Linux and macOS) that are often hidden because their filenames begin with a dot (e.g., .bashrc, .vimrc).
+These files typically control various settings and behaviors of applications and the shell environment. Users often customize dot files to tailor their computing environment to their preferences, such as configuring shell prompts, aliases, key bindings, and other settings specific to applications like Vim, Git, or even desktop environments.
+They are called dot files because their filenames start with a dot, making them hidden by default in directory listings unless explicitly shown.&lt;/p&gt;
+&lt;p&gt;I’ve shared my dot files on github here.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/dot-files/d.jpg&#34;
+	width=&#34;2586&#34;
+	height=&#34;1580&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;163&#34;
+		data-flex-basis=&#34;392px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;sketchybar&#34;&gt;&lt;a href=&#34;#sketchybar&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Sketchybar
+&lt;/h2&gt;&lt;p&gt;This bar project aims to create a highly flexible, customizable, fast and powerful status bar replacement for people that like playing with shell scripts.
+The main design principle of this project is that all elements of the bar can be added, removed and freely changed at any point in time. Thus, the configuration of the bar is not static, rather it is possible to adapt the appearance of the bar completely dynamically with the help of a powerful event-driven scripting system at any point in time using the highly configurable basic building blocks SketchyBar offers.
+Configuration file is located in ~/.config/sketchybar, we can modify the bar according to our needs.&lt;/p&gt;
+&lt;h2 id=&#34;yabai&#34;&gt;&lt;a href=&#34;#yabai&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Yabai
+&lt;/h2&gt;&lt;p&gt;yabai is a window management utility that is designed to work as an extension to the built-in window manager of macOS. yabai allows you to control your windows, spaces and displays freely using an intuitive command line interface and optionally set user-defined keyboard shortcuts using ↗ skhd and other third-party software.
+skhd is a simple hotkey daemon for macOS that focuses on responsiveness and performance. Hotkeys are defined in a text file through a simple DSL. skhd is able to hotload its config file, meaning that hotkeys can be edited and updated live while skhd is running.&lt;/p&gt;
+&lt;h2 id=&#34;vscode-vim&#34;&gt;&lt;a href=&#34;#vscode-vim&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;vscode vim
+&lt;/h2&gt;&lt;p&gt;space and v to toggle vim
+space and c to comment and uncomment multiple lines
+cmd+d to multi cursor to replace
+cmd+shift+. to display different parts of the code
+ctrl+z for zen mode
+cmd+j for terminal
+~ to change the capital or small
+ctrl+a to increment and +x for decerement&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;to search for that word&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I back up my dot files periodically. I can download thse from github and create the same development environment on any unix based device.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Android debloat</title>
+        <link>http://localhost:1313/post/debloat/</link>
+        <pubDate>Sun, 14 Jul 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/debloat/</guid>
+        <description>&lt;p&gt;I came across universal-android-debloater in github.&lt;/p&gt;
+&lt;p&gt;Android debloat refers to the process of removing or disabling unnecessary pre-installed applications (often called bloatware) that come with Android devices. These pre-installed apps are usually added by the device manufacturer. Bloatware can consume system resources such as storage, memory, and battery, and in some cases, can affect the performance of the device.
+So basically, this application aims to improve the overall performance and user experience by getting rid of these unwanted apps.&lt;/p&gt;
+&lt;p&gt;I’ve installed the app using homebrew.&lt;/p&gt;
+&lt;p&gt;brew install android-platform-tools&lt;/p&gt;
+&lt;p&gt;Then connected my android phone using USB C to my mac &amp;amp; you can run the application to get GUI and the usage is self explanatory.
+But if you want to analyse there are many adb commands(use adb help command). You can search and find out a command for every usecase.&lt;/p&gt;
+&lt;h2 id=&#34;here-are-some-commands&#34;&gt;&lt;a href=&#34;#here-are-some-commands&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Here are some commands
+&lt;/h2&gt;&lt;p&gt;== Adb Server
+adb kill-server
+adb start-server&lt;/p&gt;
+&lt;p&gt;== Adb Reboot
+adb reboot
+adb reboot recovery
+adb reboot-bootloader
+adb root //restarts adb with root permissions&lt;/p&gt;
+&lt;p&gt;== Shell
+adb shell    // Open or run commands in a terminal on the host Android device.&lt;/p&gt;
+&lt;p&gt;== Devices
+adb usb
+adb devices   //show devices attached
+adb devices -l //devices (product/model)
+adb connect ip_address_of_device&lt;/p&gt;
+&lt;p&gt;== Get device android version
+adb shell getprop ro.build.version.release&lt;/p&gt;
+&lt;p&gt;== LogCat
+adb logcat
+adb logcat -c // clear // The parameter -c will clear the current logs on the device.
+adb logcat -d &amp;gt; [path_to_file] // Save the logcat output to a file on the local system.
+adb bugreport &amp;gt; [path_to_file] // Will dump the whole device information like dumpstate, dumpsys and logcat output.&lt;/p&gt;
+&lt;p&gt;== Files
+adb push [source] [destination]    // Copy files from your computer to your phone.
+adb pull [device file location] [local file location] // Copy files from your phone to your computer.&lt;/p&gt;
+&lt;p&gt;== App install
+adb -e install path/to/app.apk&lt;/p&gt;
+&lt;p&gt;-d                        - directs command to the only connected USB device&amp;hellip;
+-e                        - directs command to the only running emulator&amp;hellip;
+-s &lt;serial number&gt;        &amp;hellip;
+-p &lt;product name or path&gt; &amp;hellip;
+The flag you decide to use has to come before the actual adb command:&lt;/p&gt;
+&lt;p&gt;adb devices | tail -n +2 | cut -sf 1 | xargs -IX adb -s X install -r com.myAppPackage // Install the given app on all connected devices.&lt;/p&gt;
+&lt;p&gt;== Uninstalling app from device
+adb uninstall com.myAppPackage
+adb uninstall &amp;lt;app .apk name&amp;gt;
+adb uninstall -k &amp;lt;app .apk name&amp;gt; -&amp;gt; &amp;ldquo;Uninstall .apk withour deleting data&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;adb shell pm uninstall com.example.MyApp
+adb shell pm clear [package] // Deletes all data associated with a package.&lt;/p&gt;
+&lt;p&gt;adb devices | tail -n +2 | cut -sf 1 | xargs -IX adb -s X uninstall com.myAppPackage //Uninstall the given app from all connected devices&lt;/p&gt;
+&lt;p&gt;== Update app
+adb install -r yourApp.apk  //  -r means re-install the app and keep its data on the device.
+adb install –k &amp;lt;.apk file path on computer&amp;gt;&lt;/p&gt;
+&lt;p&gt;== Home button
+adb shell am start -W -c android.intent.category.HOME -a android.intent.action.MAIN&lt;/p&gt;
+&lt;p&gt;== Activity Manager
+adb shell am start -a android.intent.action.VIEW
+adb shell am broadcast -a &amp;lsquo;my_action&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;adb shell am start -a android.intent.action.CALL -d tel:+972527300294 // Make a call&lt;/p&gt;
+&lt;p&gt;// Open send sms screen with phone number and the message:
+adb shell am start -a android.intent.action.SENDTO -d sms:+972527300294   &amp;ndash;es  sms_body &amp;ldquo;Test &amp;ndash;ez exit_on_sent false&lt;/p&gt;
+&lt;p&gt;// Reset permissions
+adb shell pm reset-permissions -p your.app.package
+adb shell pm grant [packageName] [ Permission]  // Grant a permission to an app.
+adb shell pm revoke [packageName] [ Permission]   // Revoke a permission from an app.&lt;/p&gt;
+&lt;p&gt;// Emulate device
+adb shell wm size 2048x1536
+adb shell wm density 288
+// And reset to default
+adb shell wm size reset
+adb shell wm density reset&lt;/p&gt;
+&lt;p&gt;== Print text
+adb shell input text &amp;lsquo;Wow, it so cool feature&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;== Screenshot
+adb shell screencap -p /sdcard/screenshot.png&lt;/p&gt;
+&lt;p&gt;$ adb shell
+shell@ $ screencap /sdcard/screen.png
+shell@ $ exit
+$ adb pull /sdcard/screen.png&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;adb shell screenrecord /sdcard/NotAbleToLogin.mp4&lt;/p&gt;
+&lt;p&gt;$ adb shell
+shell@ $ screenrecord &amp;ndash;verbose /sdcard/demo.mp4
+(press Control + C to stop)
+shell@ $ exit
+$ adb pull /sdcard/demo.mp4&lt;/p&gt;
+&lt;h2 id=&#34;images&#34;&gt;&lt;a href=&#34;#images&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;images
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/debloat/a.png&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;
+&lt;img src=&#34;http://localhost:1313/post/debloat/b.png&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;
+&lt;img src=&#34;http://localhost:1313/post/debloat/c.png&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;
+&lt;img src=&#34;http://localhost:1313/post/debloat/d.png&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;It’ll give you the descrption of the app and why should you delete the app.
+I’ve deleted almost all the recommended apps to remove bloatware. Needless to say it’s best not to delete the apps listed under unsafe and expert.
+Have fun with the application and enjoy a sleek android experience.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Trying asahi linux</title>
+        <link>http://localhost:1313/post/asahi/</link>
+        <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/asahi/</guid>
+        <description>&lt;p&gt;Asahi Linux is a project aimed at developing a Linux distribution for Apple Silicon Macs. The name &amp;ldquo;Asahi&amp;rdquo; comes from the Japanese word for &amp;ldquo;rising sun,&amp;rdquo; symbolizing a new dawn for Linux on Apple hardware. The project focuses on making Linux run smoothly on Apple&amp;rsquo;s ARM-based processors, such as the M1, M1 Pro, M1 Max, and M1 Ultra chips.&lt;/p&gt;
+&lt;h1 id=&#34;images&#34;&gt;&lt;a href=&#34;#images&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;images
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/asahi/a.png&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Key Features of Asahi Linux:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Compatibility with Apple Silicon: Asahi Linux is designed to run on Apple Silicon Macs, taking full advantage of the performance and power efficiency of Apple&amp;rsquo;s custom ARM architecture.&lt;/li&gt;
+&lt;li&gt;Open Source: The project is open source, allowing the community to contribute to its development and improve compatibility and performance.&lt;/li&gt;
+&lt;li&gt;Full Linux Experience: Asahi Linux aims to provide a full Linux experience on Apple Silicon Macs, including support for various Linux applications and utilities.&lt;/li&gt;
+&lt;li&gt;Active Development: The project is actively developed, with ongoing work to support more features and hardware components of Apple Silicon Macs.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;pros&#34;&gt;&lt;a href=&#34;#pros&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Pros:
+&lt;/h2&gt;&lt;p&gt;Installation is smooth.
+Battery usage is actually better than expected.
+It’s faster than macOs. When I open any application or run any commands on kitty it’s significantly faster than mac.&lt;/p&gt;
+&lt;h2 id=&#34;problems-that-ive-faced&#34;&gt;&lt;a href=&#34;#problems-that-ive-faced&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Problems that I’ve faced:
+&lt;/h2&gt;&lt;p&gt;I3 is not supported. I tried but it didn’t boot. But it is perfectly  compatible with hyperland.
+Screensharing problem:
+The system crashed when I started to screen share in google meet. I tried to close the lid and open but it didn’t work. I had to wait for a while and hold the power button to restart the system.&lt;/p&gt;
+&lt;h1 id=&#34;video&#34;&gt;&lt;a href=&#34;#video&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;video
+&lt;/h1&gt;&lt;p&gt;Asahi Linux represents a significant effort to bring the flexibility and power of Linux to the advanced hardware of Apple Silicon Macs, providing an exciting new option for Linux enthusiasts and developers.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Tmux</title>
+        <link>http://localhost:1313/post/tmux/</link>
+        <pubDate>Tue, 25 Jun 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/tmux/</guid>
+        <description>&lt;p&gt;Tmux is a terminal multiplexer that allows us to manage multiple terminal
+sessions within a single window. all of the commands have prefix Ctrl+b by
+default. But,I changed ctrl+b to shift+b as it is more accessible.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;tmux - for new session&lt;/li&gt;
+&lt;li&gt;tmux ls - for list of all the session&lt;/li&gt;
+&lt;li&gt;tmux a -t session name- to enter into a session(t for target)&lt;/li&gt;
+&lt;li&gt;tmux new -s session name- to create a new session (s for session)&lt;/li&gt;
+&lt;li&gt;shift+b d to detach from session&lt;/li&gt;
+&lt;li&gt;shift+b % for vertical panes&lt;/li&gt;
+&lt;li&gt;shift+b “ for horizontal panes&lt;/li&gt;
+&lt;li&gt;shift+b x to close pane&lt;/li&gt;
+&lt;li&gt;shift+b [ for copying mode &amp;amp; same with ] for pasing, use y to copy (just like
+in vim) to paste in system clipboard.&lt;/li&gt;
+&lt;li&gt;tmux kill-session- to close a session&lt;/li&gt;
+&lt;li&gt;shift+b Arrow Key (Left, Right, Up, Down) — Move between panes.&lt;/li&gt;
+&lt;li&gt;shift+B C — Create a new window.&lt;/li&gt;
+&lt;li&gt;shift+B N or P — Move to the next or previous window.&lt;/li&gt;
+&lt;li&gt;shift+B 0 (1,2&amp;hellip;) — Move to a specific window by number.&lt;/li&gt;
+&lt;li&gt;shift+B ? — View all keybindings. Press Q to exit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;my-tmux-config&#34;&gt;&lt;a href=&#34;#my-tmux-config&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;My tmux config
+&lt;/h2&gt;&lt;p&gt;Often, I use Tmux with keyboard. But when I&amp;rsquo;m lazy and slouching over on a sofa,
+it&amp;rsquo;s good idea to have mouse access. We can toggle the mouse on (or off) with
+the command set -g mouse.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/tmux/a.png&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set -s escape-time 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel &amp;#34;pbcopy&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;unbind C-b
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bind B send-prefix
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set-option -g prefix B
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set -g mouse on
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setw -g mode-keys vi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set -s escape-time 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set -g default-terminal &amp;#34;screen-256color&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set -ga terminal-overrides &amp;#34;,xterm-256color:Tc&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I can also customize the status bar(mostly colours) and few other things, but
+this configuration is more than enough to get the job done for me.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Termux</title>
+        <link>http://localhost:1313/post/termux/</link>
+        <pubDate>Tue, 18 Jun 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/termux/</guid>
+        <description>&lt;p&gt;Termux is a terminal emulator and Linux environment app for Android that allows users to run a Linux distribution on their Android devices. It provides a command-line interface and access to a large collection of Linux packages, making it possible to perform a wide range of tasks that are typically done on a Linux desktop or server. Termux is popular among developers, system administrators, and tech enthusiasts for its versatility and ease of use.&lt;/p&gt;
+&lt;p&gt;I’ve installed Termux: styling: A Termux add-on app to customize the terminal font and color theme.&lt;/p&gt;
+&lt;p&gt;Package Management:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Uses the pkg command to manage software packages, similar to apt on Debian-based systems.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg update: Updates the local package database.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg upgrade: Upgrades all installed packages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg install {package_name}: To installs a packages like git, Python ect.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg uninstall {package_name}: To uninstalls a package.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg search {keyword}: Search for packages containing the specified keyword.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg list-all: To see the lists of all available packages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg list-installed: To see the lists of all installed packages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pkg list-updates: Lists packages with available updates.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Development Environment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Supports a variety of programming languages and frameworks, such as Python, Node.js, Ruby, Java, and more.
+Remote Access:&lt;/li&gt;
+&lt;li&gt;Can be used to connect to remote servers via SSH.&lt;/li&gt;
+&lt;li&gt;Supports tools like tmux for terminal multiplexing and nano or vim for text editing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;image&#34;&gt;&lt;a href=&#34;#image&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;image
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/termux/a.webp&#34;
+	width=&#34;1080&#34;
+	height=&#34;1507&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;71&#34;
+		data-flex-basis=&#34;171px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Customizability:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Users can customize the appearance and behavior of the terminal emulator.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Supports the installation of additional shells, such as Zsh, along with customization frameworks like Oh My Zsh.
+File Management:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Access the Android file system and perform file management tasks using standard Linux commands.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd {directory_name} : Move to specific directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd : Go back to the past directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd $HOME : Change the current directory to the home directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ls : To see files and directories in the current directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ls -a: To see hidden files.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pwd: Print working directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cp {file_name} : Copy files or directories.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;rm {file_name} : Remove (delete) a file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;rm -rf {directory_name} : Delete a directory and its contents.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;touch {file_name} : To create a new file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mkdir {directory_name} : Use this command to create a new directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Networking commands:
+You can do many networking-related tasks in Termux. Here’s the some basic networking Termux commands list:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pkg install nmap : To install Nmap in Termux.&lt;/li&gt;
+&lt;li&gt;nmap {Ip_address} : To scan a network.&lt;/li&gt;
+&lt;li&gt;ifconfig : To see your network informations.&lt;/li&gt;
+&lt;li&gt;curl {url} : To display or download a web page.&lt;/li&gt;
+&lt;li&gt;wget {url} : To download a file from a URL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;System and Processes management commands:
+Termux has many system and process management commands to control and manage Android devices efficiently. Here are some system and process management Termux commands list:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;top : To see device CPU, memory, and other resource usage.&lt;/li&gt;
+&lt;li&gt;ps : List of all running processes with process IDs.&lt;/li&gt;
+&lt;li&gt;kill {process_id} : To kill a process with process ID.&lt;/li&gt;
+&lt;li&gt;uname -a : Display system information like the kernel version, system architecture, and hostname.&lt;/li&gt;
+&lt;li&gt;uptime : Shows how long the system has been running.&lt;/li&gt;
+&lt;li&gt;free : To see the system used memory and free memory.&lt;/li&gt;
+&lt;li&gt;du : To see the disk usage for files and directories.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Termux api&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;sensors&amp;rdquo;: [    &amp;ldquo;icm4n607 ACCELEROMETER&amp;rdquo;,    &amp;ldquo;akm09918 MAGNETOMETER&amp;rdquo;,    &amp;ldquo;icm4n607 GYROSCOPE&amp;rdquo;,    &amp;ldquo;tcs3701 PROXIMITY&amp;rdquo;,    &amp;ldquo;UNCALI_MAG&amp;rdquo;,    &amp;ldquo;UNCALI_GYRO&amp;rdquo;,    &amp;ldquo;SIGNIFICANT_MOTION&amp;rdquo;,    &amp;ldquo;STEP_DETECTOR&amp;rdquo;,    &amp;ldquo;STEP_COUNTER&amp;rdquo;,    &amp;ldquo;WAKE_GESTURE&amp;rdquo;,    &amp;ldquo;DEVICE_ORIENTATION&amp;rdquo;,    &amp;ldquo;STATIONARY_DETECT&amp;rdquo;,    &amp;ldquo;UNCALI_ACC&amp;rdquo;,    &amp;ldquo;sx933x SAR&amp;rdquo;,    &amp;ldquo;tcs3701 LIGHT&amp;rdquo;,    &amp;ldquo;RAW_MAG&amp;rdquo;,    &amp;ldquo;ai_shutter&amp;rdquo;,    &amp;ldquo;STEP_DETECTOR_WAKEUP&amp;rdquo;,    &amp;ldquo;OPLUS Fusion Light Sensor&amp;rdquo;,    &amp;ldquo;OPLUS Side Panel Fusion Light Sensor&amp;rdquo;,    &amp;ldquo;PICKUP_DETECT&amp;rdquo;,    &amp;ldquo;LUX_AOD&amp;rdquo;,    &amp;ldquo;PEDO_MINUTE&amp;rdquo;,    &amp;ldquo;Game Rotation Vector Sensor&amp;rdquo;,    &amp;ldquo;GeoMag Rotation Vector Sensor&amp;rdquo;,    &amp;ldquo;Gravity Sensor&amp;rdquo;,    &amp;ldquo;Linear Acceleration Sensor&amp;rdquo;,    &amp;ldquo;Rotation Vector Sensor&amp;rdquo;,    &amp;ldquo;Orientation Sensor&amp;rdquo;  ]}&lt;/p&gt;
+&lt;p&gt;Locayiotion also&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>My Zsh</title>
+        <link>http://localhost:1313/post/zsh/</link>
+        <pubDate>Sun, 16 Jun 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/zsh/</guid>
+        <description>&lt;h2 id=&#34;my-zsh&#34;&gt;&lt;a href=&#34;#my-zsh&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;my zsh
+&lt;/h2&gt;&lt;p&gt;Let’s talk about mac terminal. So, generally Mac comes with basic and boring
+terminal(zsh).&lt;/p&gt;
+&lt;p&gt;For a long time I didn’t know the power we can leverage using zsh. I looked in
+to youtube for terminal setup found few amazing tutorials to make my terminal
+flexible as well as aesthetic.&lt;/p&gt;
+&lt;p&gt;Almost all of the tutorials explained the same thing:&lt;/p&gt;
+&lt;p&gt;Installing Iterm2 and oh my zsh framework A powerlevel10k theme A nerd font ( I
+use jetbrains mono) Configure .zshrc file to my own needs such as auto
+completions &amp;amp; few aliases…. Then I made my terminal mildly transparent to make
+it look more charming.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/zsh/zsh.png&#34;
+	width=&#34;3023&#34;
+	height=&#34;1911&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;379px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;So, since I’m addicted to aesthetics of my terminal I wanted learn vim so that I
+can stick with it while coding and jotting down ideas.&lt;/p&gt;
+&lt;p&gt;Initially it seemed worthless effort. But after few weeks of “trying and
+leaving”, one fine day I determined to learn vim. The basic idea here is you
+should be able to finish your entire time in vim without lifting your fingers on
+your keyboard. I wanted to list out the commands that I use, but it’s pretty
+useless, you can find better documentation here.&lt;/p&gt;
+&lt;p&gt;Apart from using :vsp to vertically split screen to compare 2 files at the same
+time, I configured (aliased) few plugins that I use often. To access nerdtree
+press F1, you can toggle using ctrl+w or you can also use mouse. If you add
+#!/usr/bin/env python3 at the beginning of python file you can click F2 to run
+it or else you should run with :! command.&lt;/p&gt;
+&lt;p&gt;I recently need to download my telegram chat history. When I’ve downloaded it
+gave me all these html files. But I really don’t wanna store every file. I want
+one single html file with all the data. So run a python command to get me the
+names as I desired. Then I use cat command on my mac terminal to concatenate all
+the files.&lt;/p&gt;
+&lt;p&gt;I also use tmux as terminal emulator to run multiple sessions parallelly.&lt;/p&gt;
+&lt;h2 id=&#34;abbreviations-and-aliases&#34;&gt;&lt;a href=&#34;#abbreviations-and-aliases&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;abbreviations and aliases
+&lt;/h2&gt;&lt;p&gt;I’ve learnt basics of bash scripting and it’s quite fun to use in actual life. It’s just automating stuff that you would do with your terminal. Let’s say you have to run few commands at once to perform certain task.&lt;/p&gt;
+&lt;p&gt;Not only that homebrew has so many
+fun once cmatrix, tetris, toilet,…&lt;/p&gt;
+&lt;p&gt;history
+brew
+open
+google
+autocompletion…pluggins
+cmatrix
+neofetch
+leave
+say -V tessa&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Server</title>
+        <link>http://localhost:1313/post/server/</link>
+        <pubDate>Tue, 11 Jun 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/server/</guid>
+        <description>&lt;p&gt;Ubuntu Server is a version of the Ubuntu operating system specifically designed for use on servers and in data centers. Unlike the desktop version, it does not include a graphical user interface (GUI) by default, making it more lightweight and better suited for server tasks such as web hosting, file serving, email hosting, and database management. Ubuntu Server is known for its stability, security, and ease of use, and it is widely used in enterprise environments.&lt;/p&gt;
+&lt;p&gt;I’ve installed ubuntu server on my old lenovo laptop.&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;&lt;a href=&#34;#setup&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;setup
+&lt;/h2&gt;&lt;p&gt;Download Ubuntu Server ISO:
+Create a Bootable USB Drive:
+Boot from the USB Drive:
+Install Ubuntu Server: self explanatory
+Select your language and keyboard layout.
+Follow the on-screen instructions to configure your network settings, select the installation drive, and set up the storage configuration.
+Create a user account and set a password.
+Select the software you want to install (e.g., OpenSSH server for remote access, LAMP server for web hosting).
+Review your choices and start the installation process.&lt;/p&gt;
+&lt;p&gt;Post-Installation Setup:
+sudo apt update
+sudo apt upgrade&lt;/p&gt;
+&lt;p&gt;If I want to access via sftp in terminal the commands:&lt;/p&gt;
+&lt;p&gt;sftp &lt;a class=&#34;link&#34; href=&#34;mailto:rama@192.168.0.104&#34; &gt;rama@192.168.0.104&lt;/a&gt; (give your ip address after your server name)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We can even access through a file manager for ease of access. If we have a
+linux os it&amp;rsquo;ll be free and easy. If we want to access it from mac we need to
+pay for third party softwares.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;But using terminal we can still access and perform necessary operations.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;basic-commands&#34;&gt;&lt;a href=&#34;#basic-commands&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Basic commands
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;put&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uploading&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;files&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#To upload a complete folder, first create a folder with the same name then put -r foldername&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;downloading&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;files&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;bye&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/server/b.png&#34;
+	width=&#34;3048&#34;
+	height=&#34;1844&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;165&#34;
+		data-flex-basis=&#34;396px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;plex&#34;&gt;&lt;a href=&#34;#plex&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;plex
+&lt;/h2&gt;&lt;p&gt;Plex is a popular media server and client application that allows you to organize, stream, and access your personal media collections such as movies, TV shows, music, photos, and more. It enables users to centralize their media content on a server and access it from various devices like smartphones, tablets, smart TVs, computers, and streaming devices, both locally and remotely.&lt;/p&gt;
+&lt;p&gt;Remote Access:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Allows you to access your media library from anywhere with an internet connection.&lt;/li&gt;
+&lt;li&gt;Securely share your media library with friends and family.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/server/p.jpeg&#34;
+	width=&#34;2880&#34;
+	height=&#34;1800&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I can access our plex media server through http://192.168.0.118:32400/web.
+But I couldn’t properly configured plex. So I left it for future todo.
+Anyway I can access my local server using vpn, I’ll probably setup later.&lt;/p&gt;
+&lt;p&gt;I’ve installed ubuntu server on my old lenovo laptop.
+The ip address is 192.168.0.118
+In the time of necessity, turn on the laptop by plugging charging cable and always keep it on. Connect ethernet.
+It’ll ask for credentials after booting
+ID: rama passoword: Chanakya#01
+If we want to update the server by “sudo apt update”.
+If we want to access via sftp in terminal the commands:
+sftp://rama@192.168.0.118
+Password: Chanakya#01&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We can even access through finder or any file manager. (ease of access)
+But with terminal
+put:- for uploading files to server
+To upload a complete folder, first create a folder with the same name then
+put -r foldername
+get:- downloading files from server
+exit to exit from server.
+we can access our plex media server through http://192.168.0.118:32400/web.
+I tried to access again now the ip change to
+sftp &lt;a class=&#34;link&#34; href=&#34;mailto:rama@192.168.0.104&#34; &gt;rama@192.168.0.104&lt;/a&gt;
+so if we can’t access run ifconfig command to know ip address.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Opensource</title>
+        <link>http://localhost:1313/post/opensource/</link>
+        <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/opensource/</guid>
+        <description>&lt;p&gt;After discovering , F-Droid is an installable catalogue of FOSS (Free and Open Source Software) applications for the Android platform. The client makes it easy to browse, install, and keep track of updates on your device.
+, I became very interested in open-source apps.&lt;/p&gt;
+&lt;p&gt;(Fossify apps) exactly like native google features&lt;/p&gt;
+&lt;h2 id=&#34;openboard&#34;&gt;&lt;a href=&#34;#openboard&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;OpenBoard
+&lt;/h2&gt;&lt;p&gt;OpenBoard is a 100% FOSS keyboard based on AOSP, with no dependency on Google binaries, and it respects your privacy. You can explore and configure the keyboard settings to your preferences. Rest assured about the privacy aspects since it does not track or log your keystrokes.&lt;/p&gt;
+&lt;h2 id=&#34;florisboard&#34;&gt;&lt;a href=&#34;#florisboard&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Florisboard
+&lt;/h2&gt;&lt;p&gt;Florisboard is another open-source keyboard that emphasizes privacy and offers a variety of customization options. You can take advantage of its rich feature set and customize the keyboard layout, themes, and gestures. It stores up to 100 clipboard items but doesn’t have good spell correction support.&lt;/p&gt;
+&lt;h2 id=&#34;fairemail&#34;&gt;&lt;a href=&#34;#fairemail&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;FairEmail
+&lt;/h2&gt;&lt;p&gt;FairEmail is a fully-featured email client that focuses on privacy and usability. It can be overwhelming at first due to its extensive features and customization options. Spend some time getting familiar with its interface and features because it has a learning curve.
+I&amp;rsquo;ve also used K9 Mail. In my opinion, if real-time notifications are crucial, stick with FairEmail. Otherwise, K9 Mail is a simpler alternative if you can tolerate the 15-minute check interval.&lt;/p&gt;
+&lt;h2 id=&#34;music-player&#34;&gt;&lt;a href=&#34;#music-player&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Music Player
+&lt;/h2&gt;&lt;p&gt;Open-source music players for Android come in various forms with different focuses, such as minimalism and feature-rich interfaces. They offer features like an equalizer, sleep timer, and file organization with a minimal interface.
+I’ve tried with gramophone.&lt;/p&gt;
+&lt;h2 id=&#34;seal&#34;&gt;&lt;a href=&#34;#seal&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Seal
+&lt;/h2&gt;&lt;p&gt;Seal allows you to download videos and audio files from platforms such as YouTube. The best feature, in my opinion, is the ability to download all videos in a YouTube playlist with one click.&lt;/p&gt;
+&lt;h2 id=&#34;plain&#34;&gt;&lt;a href=&#34;#plain&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Plain
+&lt;/h2&gt;&lt;p&gt;PlainApp is an open-source application that allows you to manage your phone through a web browser. Access files, videos, music, contacts, and more from your desktop using a secure, easy-to-use web interface!&lt;/p&gt;
+&lt;h2 id=&#34;termux&#34;&gt;&lt;a href=&#34;#termux&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Termux
+&lt;/h2&gt;&lt;p&gt;Termux provides a powerful terminal emulator and Linux environment for Android, allowing you to run a variety of Linux command-line utilities. You can install and configure packages according to your needs and create and run scripts to automate tasks.&lt;/p&gt;
+&lt;h2 id=&#34;vi-music&#34;&gt;&lt;a href=&#34;#vi-music&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Vi Music
+&lt;/h2&gt;&lt;p&gt;Vi Music is an open-source app intended as a replacement for YouTube Music, offering features to stream and manage your music library. The interface is clean, and you can download songs offline without needing YouTube Premium.&lt;/p&gt;
+&lt;h2 id=&#34;open-camera&#34;&gt;&lt;a href=&#34;#open-camera&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Open Camera
+&lt;/h2&gt;&lt;p&gt;Open Camera is a fully-featured camera app that offers extensive manual controls and features. You can experiment with the manual settings to enhance your photography skills. There is a lot of customization available in the app to match any photography style.&lt;/p&gt;
+&lt;h2 id=&#34;personaldnsfilter&#34;&gt;&lt;a href=&#34;#personaldnsfilter&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;personalDNSfilter
+&lt;/h2&gt;&lt;p&gt;PersonalDNSfilter is a DNS filter with firewall capabilities to block unwanted content and ads at the DNS level. Set up the DNS filters according to your privacy and security needs.&lt;/p&gt;
+&lt;h2 id=&#34;newpipe&#34;&gt;&lt;a href=&#34;#newpipe&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;NewPipe
+&lt;/h2&gt;&lt;p&gt;NewPipe is a lightweight YouTube frontend that does not rely on Google services and offers features like background playback and download options. You can utilize the background playback and download options for a better YouTube experience. Benefit from improved privacy since it does not use Google’s proprietary APIs.&lt;/p&gt;
+&lt;p&gt;By exploring and customizing these applications, you can make the most of their open-source benefits while tailoring them to your needs.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

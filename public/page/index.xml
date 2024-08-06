@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on Sreeram venkata</title>
+        <link>http://localhost:1313/page/</link>
+        <description>Recent content in Pages on Sreeram venkata</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 06 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About</title>
+        <link>http://localhost:1313/page/about/</link>
+        <pubDate>Wed, 06 Mar 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/page/about/</guid>
+        <description>&lt;p&gt;Hey, I’m sreeram. I’ve been wanting to start a blog for years. I’ve made
+attempts before, but I struggled to find enough content. Then, much later, when
+I landed on my job and had a few months to spare, I felt this strong urge to
+finally create &amp;amp; publish some content. Well, I am too shy for youtube and
+instagram anyway. So, I started this journey to create a website where I could
+share content that I believe worth sharing.&lt;/p&gt;
+&lt;p&gt;Then I started searching on youtube about content writing and encountered the
+book review “Show Your Work”. This book suggests to involve in the creative
+process rather than just the final product. That idea resonated deeply with me —
+document, don’t create.&lt;/p&gt;
+&lt;p&gt;Another main influence was the 512kb club. This showcases websites that are
+brilliantly crafted within 512kb. These minimalistic websites truly inspired me
+to create and share my own explorations. I experimented with platforms like Wix,
+Blogspot, and WordPress. Then I found Hugo- a static site generator without
+modern bloated JS. As I surfed the web, I stumbled upon some seriously awesome
+blogs. And I thought, “Why not give it a try?” So here I am, diving into this
+blogging adventure!&lt;/p&gt;
+&lt;p&gt;The primary aim of this platform is to document the blog-worthy things I have
+done. It’s all about keeping it authentic; not worrying about what my relatives
+or that friend from forever ago might think. If I step into the shoes of a
+reader and think, ‘ Wow, this is cool! ’, that’s exactly the kind of stuff
+you’ll find on this blog. Moreover, I would love to
+&lt;a class=&#34;link&#34; href=&#34;mailto:pvsreeram1@gmail.com&#34; &gt;connect&lt;/a&gt; with remarkable individuals like you. So,
+welcome aboard and Join me in this exploration!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Archives</title>
+        <link>http://localhost:1313/page/archives/</link>
+        <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/page/archives/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

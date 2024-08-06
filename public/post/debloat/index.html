@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Debloating android phone">
+<title>Android debloat</title>
+
+<link rel='canonical' href='http://localhost:1313/post/debloat/'>
+
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Android debloat">
+<meta property='og:description' content="Debloating android phone">
+<meta property='og:url' content='http://localhost:1313/post/debloat/'>
+<meta property='og:site_name' content='Sreeram venkata'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='android' /><meta property='article:published_time' content='2024-07-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-07-14T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Android debloat">
+<meta name="twitter:description" content="Debloating android phone">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu1c14afa2d766dfe17cd12fc57b69d39c_1477920_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Sreeram venkata</a></h1>
+            <h2 class="site-description">This blog pretty much sumps up my life. Here, I&#39;ll share all of my passions and interests.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#here-are-some-commands">Here are some commands</a></li>
+    <li><a href="#images">images</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" >
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/debloat/">Android debloat</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Debloating android phone
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 14, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    4 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>I came across universal-android-debloater in github.</p>
+<p>Android debloat refers to the process of removing or disabling unnecessary pre-installed applications (often called bloatware) that come with Android devices. These pre-installed apps are usually added by the device manufacturer. Bloatware can consume system resources such as storage, memory, and battery, and in some cases, can affect the performance of the device.
+So basically, this application aims to improve the overall performance and user experience by getting rid of these unwanted apps.</p>
+<p>I’ve installed the app using homebrew.</p>
+<p>brew install android-platform-tools</p>
+<p>Then connected my android phone using USB C to my mac &amp; you can run the application to get GUI and the usage is self explanatory.
+But if you want to analyse there are many adb commands(use adb help command). You can search and find out a command for every usecase.</p>
+<h2 id="here-are-some-commands"><a href="#here-are-some-commands" class="header-anchor"></a>Here are some commands
+</h2><p>== Adb Server
+adb kill-server
+adb start-server</p>
+<p>== Adb Reboot
+adb reboot
+adb reboot recovery
+adb reboot-bootloader
+adb root //restarts adb with root permissions</p>
+<p>== Shell
+adb shell    // Open or run commands in a terminal on the host Android device.</p>
+<p>== Devices
+adb usb
+adb devices   //show devices attached
+adb devices -l //devices (product/model)
+adb connect ip_address_of_device</p>
+<p>== Get device android version
+adb shell getprop ro.build.version.release</p>
+<p>== LogCat
+adb logcat
+adb logcat -c // clear // The parameter -c will clear the current logs on the device.
+adb logcat -d &gt; [path_to_file] // Save the logcat output to a file on the local system.
+adb bugreport &gt; [path_to_file] // Will dump the whole device information like dumpstate, dumpsys and logcat output.</p>
+<p>== Files
+adb push [source] [destination]    // Copy files from your computer to your phone.
+adb pull [device file location] [local file location] // Copy files from your phone to your computer.</p>
+<p>== App install
+adb -e install path/to/app.apk</p>
+<p>-d                        - directs command to the only connected USB device&hellip;
+-e                        - directs command to the only running emulator&hellip;
+-s <serial number>        &hellip;
+-p <product name or path> &hellip;
+The flag you decide to use has to come before the actual adb command:</p>
+<p>adb devices | tail -n +2 | cut -sf 1 | xargs -IX adb -s X install -r com.myAppPackage // Install the given app on all connected devices.</p>
+<p>== Uninstalling app from device
+adb uninstall com.myAppPackage
+adb uninstall &lt;app .apk name&gt;
+adb uninstall -k &lt;app .apk name&gt; -&gt; &ldquo;Uninstall .apk withour deleting data&rdquo;</p>
+<p>adb shell pm uninstall com.example.MyApp
+adb shell pm clear [package] // Deletes all data associated with a package.</p>
+<p>adb devices | tail -n +2 | cut -sf 1 | xargs -IX adb -s X uninstall com.myAppPackage //Uninstall the given app from all connected devices</p>
+<p>== Update app
+adb install -r yourApp.apk  //  -r means re-install the app and keep its data on the device.
+adb install –k &lt;.apk file path on computer&gt;</p>
+<p>== Home button
+adb shell am start -W -c android.intent.category.HOME -a android.intent.action.MAIN</p>
+<p>== Activity Manager
+adb shell am start -a android.intent.action.VIEW
+adb shell am broadcast -a &lsquo;my_action&rsquo;</p>
+<p>adb shell am start -a android.intent.action.CALL -d tel:+972527300294 // Make a call</p>
+<p>// Open send sms screen with phone number and the message:
+adb shell am start -a android.intent.action.SENDTO -d sms:+972527300294   &ndash;es  sms_body &ldquo;Test &ndash;ez exit_on_sent false</p>
+<p>// Reset permissions
+adb shell pm reset-permissions -p your.app.package
+adb shell pm grant [packageName] [ Permission]  // Grant a permission to an app.
+adb shell pm revoke [packageName] [ Permission]   // Revoke a permission from an app.</p>
+<p>// Emulate device
+adb shell wm size 2048x1536
+adb shell wm density 288
+// And reset to default
+adb shell wm size reset
+adb shell wm density reset</p>
+<p>== Print text
+adb shell input text &lsquo;Wow, it so cool feature&rsquo;</p>
+<p>== Screenshot
+adb shell screencap -p /sdcard/screenshot.png</p>
+<p>$ adb shell
+shell@ $ screencap /sdcard/screen.png
+shell@ $ exit
+$ adb pull /sdcard/screen.png</p>
+<hr>
+<p>adb shell screenrecord /sdcard/NotAbleToLogin.mp4</p>
+<p>$ adb shell
+shell@ $ screenrecord &ndash;verbose /sdcard/demo.mp4
+(press Control + C to stop)
+shell@ $ exit
+$ adb pull /sdcard/demo.mp4</p>
+<h2 id="images"><a href="#images" class="header-anchor"></a>images
+</h2><p><img src="/post/debloat/a.png"
+	width="2880"
+	height="1800"
+	
+	loading="lazy"
+	
+		alt="Image 1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="160"
+		data-flex-basis="384px"
+	
+>
+<img src="/post/debloat/b.png"
+	width="2880"
+	height="1800"
+	
+	loading="lazy"
+	
+		alt="Image 1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="160"
+		data-flex-basis="384px"
+	
+>
+<img src="/post/debloat/c.png"
+	width="2880"
+	height="1800"
+	
+	loading="lazy"
+	
+		alt="Image 1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="160"
+		data-flex-basis="384px"
+	
+>
+<img src="/post/debloat/d.png"
+	width="2880"
+	height="1800"
+	
+	loading="lazy"
+	
+		alt="Image 1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="160"
+		data-flex-basis="384px"
+	
+></p>
+<p>It’ll give you the descrption of the app and why should you delete the app.
+I’ve deleted almost all the recommended apps to remove bloatware. Needless to say it’s best not to delete the apps listed under unsafe and expert.
+Have fun with the application and enjoy a sleek android experience.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/android/">Android</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on Jul 14, 2024
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    
+        
+    
+
+    
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        
+    </body>
+</html>

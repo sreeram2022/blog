@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="My experience with termux">
+<title>Termux</title>
+
+<link rel='canonical' href='http://localhost:1313/post/termux/'>
+
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Termux">
+<meta property='og:description' content="My experience with termux">
+<meta property='og:url' content='http://localhost:1313/post/termux/'>
+<meta property='og:site_name' content='Sreeram venkata'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='android' /><meta property='article:published_time' content='2024-06-18T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-06-18T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Termux">
+<meta name="twitter:description" content="My experience with termux">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu1c14afa2d766dfe17cd12fc57b69d39c_1477920_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Sreeram venkata</a></h1>
+            <h2 class="site-description">This blog pretty much sumps up my life. Here, I&#39;ll share all of my passions and interests.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" >
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/termux/">Termux</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            My experience with termux
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 18, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Termux is a terminal emulator and Linux environment app for Android that allows users to run a Linux distribution on their Android devices. It provides a command-line interface and access to a large collection of Linux packages, making it possible to perform a wide range of tasks that are typically done on a Linux desktop or server. Termux is popular among developers, system administrators, and tech enthusiasts for its versatility and ease of use.</p>
+<p>I’ve installed Termux: styling: A Termux add-on app to customize the terminal font and color theme.</p>
+<p>Package Management:</p>
+<ul>
+<li>
+<p>Uses the pkg command to manage software packages, similar to apt on Debian-based systems.</p>
+</li>
+<li>
+<p>pkg update: Updates the local package database.</p>
+</li>
+<li>
+<p>pkg upgrade: Upgrades all installed packages.</p>
+</li>
+<li>
+<p>pkg install {package_name}: To installs a packages like git, Python ect.</p>
+</li>
+<li>
+<p>pkg uninstall {package_name}: To uninstalls a package.</p>
+</li>
+<li>
+<p>pkg search {keyword}: Search for packages containing the specified keyword.</p>
+</li>
+<li>
+<p>pkg list-all: To see the lists of all available packages.</p>
+</li>
+<li>
+<p>pkg list-installed: To see the lists of all installed packages.</p>
+</li>
+<li>
+<p>pkg list-updates: Lists packages with available updates.</p>
+</li>
+</ul>
+<p>Development Environment:</p>
+<ul>
+<li>Supports a variety of programming languages and frameworks, such as Python, Node.js, Ruby, Java, and more.
+Remote Access:</li>
+<li>Can be used to connect to remote servers via SSH.</li>
+<li>Supports tools like tmux for terminal multiplexing and nano or vim for text editing.</li>
+</ul>
+<h1 id="image"><a href="#image" class="header-anchor"></a>image
+</h1><p><img src="/post/termux/a.webp"
+	width="1080"
+	height="1507"
+	
+	loading="lazy"
+	
+		alt="Image 1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="71"
+		data-flex-basis="171px"
+	
+></p>
+<p>Customizability:</p>
+<ul>
+<li>
+<p>Users can customize the appearance and behavior of the terminal emulator.</p>
+</li>
+<li>
+<p>Supports the installation of additional shells, such as Zsh, along with customization frameworks like Oh My Zsh.
+File Management:</p>
+</li>
+<li>
+<p>Access the Android file system and perform file management tasks using standard Linux commands.</p>
+</li>
+<li>
+<p>cd {directory_name} : Move to specific directory.</p>
+</li>
+<li>
+<p>cd : Go back to the past directory.</p>
+</li>
+<li>
+<p>cd $HOME : Change the current directory to the home directory.</p>
+</li>
+<li>
+<p>ls : To see files and directories in the current directory.</p>
+</li>
+<li>
+<p>ls -a: To see hidden files.</p>
+</li>
+<li>
+<p>pwd: Print working directory.</p>
+</li>
+<li>
+<p>cp {file_name} : Copy files or directories.</p>
+</li>
+<li>
+<p>rm {file_name} : Remove (delete) a file.</p>
+</li>
+<li>
+<p>rm -rf {directory_name} : Delete a directory and its contents.</p>
+</li>
+<li>
+<p>touch {file_name} : To create a new file.</p>
+</li>
+<li>
+<p>mkdir {directory_name} : Use this command to create a new directory.</p>
+</li>
+</ul>
+<p>Networking commands:
+You can do many networking-related tasks in Termux. Here’s the some basic networking Termux commands list:</p>
+<ul>
+<li>pkg install nmap : To install Nmap in Termux.</li>
+<li>nmap {Ip_address} : To scan a network.</li>
+<li>ifconfig : To see your network informations.</li>
+<li>curl {url} : To display or download a web page.</li>
+<li>wget {url} : To download a file from a URL.</li>
+</ul>
+<p>System and Processes management commands:
+Termux has many system and process management commands to control and manage Android devices efficiently. Here are some system and process management Termux commands list:</p>
+<ul>
+<li>top : To see device CPU, memory, and other resource usage.</li>
+<li>ps : List of all running processes with process IDs.</li>
+<li>kill {process_id} : To kill a process with process ID.</li>
+<li>uname -a : Display system information like the kernel version, system architecture, and hostname.</li>
+<li>uptime : Shows how long the system has been running.</li>
+<li>free : To see the system used memory and free memory.</li>
+<li>du : To see the disk usage for files and directories.</li>
+</ul>
+<p>Termux api</p>
+<p>&ldquo;sensors&rdquo;: [    &ldquo;icm4n607 ACCELEROMETER&rdquo;,    &ldquo;akm09918 MAGNETOMETER&rdquo;,    &ldquo;icm4n607 GYROSCOPE&rdquo;,    &ldquo;tcs3701 PROXIMITY&rdquo;,    &ldquo;UNCALI_MAG&rdquo;,    &ldquo;UNCALI_GYRO&rdquo;,    &ldquo;SIGNIFICANT_MOTION&rdquo;,    &ldquo;STEP_DETECTOR&rdquo;,    &ldquo;STEP_COUNTER&rdquo;,    &ldquo;WAKE_GESTURE&rdquo;,    &ldquo;DEVICE_ORIENTATION&rdquo;,    &ldquo;STATIONARY_DETECT&rdquo;,    &ldquo;UNCALI_ACC&rdquo;,    &ldquo;sx933x SAR&rdquo;,    &ldquo;tcs3701 LIGHT&rdquo;,    &ldquo;RAW_MAG&rdquo;,    &ldquo;ai_shutter&rdquo;,    &ldquo;STEP_DETECTOR_WAKEUP&rdquo;,    &ldquo;OPLUS Fusion Light Sensor&rdquo;,    &ldquo;OPLUS Side Panel Fusion Light Sensor&rdquo;,    &ldquo;PICKUP_DETECT&rdquo;,    &ldquo;LUX_AOD&rdquo;,    &ldquo;PEDO_MINUTE&rdquo;,    &ldquo;Game Rotation Vector Sensor&rdquo;,    &ldquo;GeoMag Rotation Vector Sensor&rdquo;,    &ldquo;Gravity Sensor&rdquo;,    &ldquo;Linear Acceleration Sensor&rdquo;,    &ldquo;Rotation Vector Sensor&rdquo;,    &ldquo;Orientation Sensor&rdquo;  ]}</p>
+<p>Locayiotion also</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/android/">Android</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on Jun 18, 2024
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    
+        
+    
+
+    
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        
+    </body>
+</html>
